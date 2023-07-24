@@ -11,7 +11,7 @@ const WLinkSpace: React.FC = () => {
     setUrl(`${version}${page}${params}`);
   }, [version, page, params]);
 
-  const handleChangeEvent = (e, func) => {
+  const handleChangeEvent = (e: any, func: Function) => {
     func(e.target.value);
   };
 
