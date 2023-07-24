@@ -1,0 +1,11 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  margin-top: 60px;
+}

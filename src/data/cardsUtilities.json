@@ -1,0 +1,20 @@
+[
+  {
+    "title": "WLink",
+    "description": "genera el link necesario",
+    "show": true,
+    "order": 1
+  },
+  {
+    "title": "BChecker",
+    "description": "genera el link necesario",
+    "show": false,
+    "order": 2
+  },
+  {
+    "title": "UTable",
+    "description": "genera el link necesario",
+    "show": true,
+    "order": 3
+  }
+]

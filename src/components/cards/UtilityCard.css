@@ -1,0 +1,12 @@
+#card-utility {
+  border: 1px solid #000;
+  padding: 0 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+#card-utility.selected {
+  border: 1px solid rgb(93, 56, 185);
+  background-color: rgb(149, 68, 224);
+}
