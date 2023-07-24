@@ -32,9 +32,13 @@ const UTableSpace: React.FC = () => {
   const table = usersDisplayed.map((user) => {
     const idBtnUserId = `btnUserId-${user.id}`;
     const idBtnUserPass = `btnUserPass-${user.id}`;
+    const idBtnUserPin2 = `btnUserPin2-${user.id}`;
+    const idBtnUserUsuclo = `btnUserUsuclo-${user.id}`;
 
     const greenBtnId = copiedId === idBtnUserId ? "green" : "";
     const greenBtnPass = copiedId === idBtnUserPass ? "green" : "";
+    const greenBtnPin2 = copiedId === idBtnUserPin2 ? "green" : "";
+    const greenBtnUsuclo = copiedId === idBtnUserUsuclo ? "green" : "";
 
     return (
       <tr key={`user-${user.name}`}>
@@ -55,6 +59,24 @@ const UTableSpace: React.FC = () => {
             onClick={copyClipboard}
           >
             {user.pass}
+          </button>
+        </td>
+        <td>
+          <button
+            id={idBtnUserPin2}
+            className={greenBtnPin2}
+            onClick={copyClipboard}
+          >
+            {user.pin2}
+          </button>
+        </td>
+        <td>
+          <button
+            id={idBtnUserUsuclo}
+            className={greenBtnUsuclo}
+            onClick={copyClipboard}
+          >
+            {user.usuclo}
           </button>
         </td>
       </tr>
@@ -81,6 +103,8 @@ const UTableSpace: React.FC = () => {
             <th>Name</th>
             <th>Id</th>
             <th>Pass</th>
+            <th>Pin2</th>
+            <th>Usuclo</th>
           </tr>
         </thead>
         <tbody>{table}</tbody>

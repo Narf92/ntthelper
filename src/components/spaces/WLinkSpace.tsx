@@ -8,7 +8,9 @@ const WLinkSpace: React.FC = () => {
   const [params, setParams] = useState("");
 
   useEffect(() => {
-    setUrl(`${version}${page}${params}`);
+    let versionJs = version.substring(27);
+    let jsFunction = `top.Inferior.Cos.document.location="${versionJs}${params}";`;
+    setUrl(jsFunction);
   }, [version, page, params]);
 
   const handleChangeEvent = (e: any, func: Function) => {
