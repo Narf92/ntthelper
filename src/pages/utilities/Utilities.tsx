@@ -23,9 +23,8 @@ const Utilities: React.FC = () => {
   const [utilities, setUtilities] = useState<Array<Utility>>(cards);
   const [displayedCards, setDisplayedCards] = useState<Array<Utility>>(cards);
 
-  const orderCards = ({ move, event }) => {
-    event.preventDefault();
-    console.log(move, event);
+  const orderCards = () => {
+    setDisplayedCards(cards);
   };
 
   const handleSelectCard = (id: string) => {

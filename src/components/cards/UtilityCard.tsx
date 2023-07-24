@@ -21,8 +21,8 @@ const UtilityCard: React.FC<Props> = (props: Props) => {
         handleClick(title);
       }}
     >
-      <button onClick={() => orderCard({ move: "left" })}>a</button>
-      <button onClick={() => orderCard({ move: "right" })}>b</button>
+      <button onClick={() => orderCard}>a</button>
+      <button onClick={() => orderCard}>b</button>
       <h2>{title}</h2>
       <p>{description}</p>
     </div>
