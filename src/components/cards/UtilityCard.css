@@ -4,9 +4,19 @@
   width: 200px;
   height: 200px;
   border-radius: 20px;
-}
+  box-shadow: 10px 10px 5px grey;
 
-#card-utility.selected {
-  border: 1px solid rgb(93, 56, 185);
-  background-color: rgb(149, 68, 224);
+  &:hover {
+    background-color: rgb(149, 68, 224);
+    cursor: pointer;
+  }
+
+  &.selected {
+    border: 1px solid rgb(93, 56, 185);
+    background-color: rgb(149, 68, 224);
+
+    &:hover {
+      background-color: white;
+    }
+  }
 }

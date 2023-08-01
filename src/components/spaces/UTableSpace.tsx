@@ -95,6 +95,8 @@ const UTableSpace: React.FC = () => {
           onChange={handleFilterInput}
           value={filterText}
         />
+        <button className="upload">⬆</button>
+        <button className="download">⬇</button>
       </div>
 
       <table>

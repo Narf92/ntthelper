@@ -6,6 +6,23 @@ button {
   background-color: white;
   padding: 5px;
   border-radius: 10px;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #ec5353;
+    cursor: pointer;
+  }
+}
+
+.upload {
+  width: 35px;
+  border-radius: 100%;
+  background-color: lightblue;
+}
+.download {
+  width: 35px;
+  border-radius: 100%;
+  background-color: lightgreen;
 }
 
 .green {
@@ -18,15 +35,17 @@ table {
 
 .utilitySpace {
   border: 1px solid black;
+  margin: 0 5px;
   padding: 0 10px;
   height: 400px;
   overflow: auto;
   border-radius: 20px;
-}
+  box-shadow: 10px 10px 5px grey;
 
-.utilitySpace input {
-  width: 70%;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border-radius: 20px;
+  & input {
+    width: 70%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
 }

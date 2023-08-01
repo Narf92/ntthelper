@@ -2,20 +2,40 @@ import { useEffect, useState } from "react";
 import "./Spaces.css";
 
 const WLinkSpace: React.FC = () => {
-  const [url, setUrl] = useState("");
-  const [version, setVersion] = useState("");
-  const [page, setPage] = useState("");
-  const [params, setParams] = useState("");
+  const [url, setUrl] = useState<string>("");
+  const [version, setVersion] = useState<string>("");
+  const [urls, setUrls] = useState<string[]>([]);
 
   useEffect(() => {
     let versionJs = version.substring(27);
-    let jsFunction = `top.Inferior.Cos.document.location="${versionJs}${params}";`;
+    let jsFunction = `top.Inferior.Cos.document.location="${versionJs}";`;
     setUrl(jsFunction);
-  }, [version, page, params]);
+  }, [version]);
 
   const handleChangeEvent = (e: any, func: Function) => {
     func(e.target.value);
   };
+
+  const deleteUrl = (url: string) => {
+    let newUrls = urls.filter((x) => x !== url);
+    setUrls(newUrls);
+  };
+
+  const table = (
+    <table>
+      {urls.map((url) => {
+        return (
+          <tr>
+            <button onClick={() => navigator.clipboard.writeText(url)}>
+              Copy
+            </button>
+            <button onClick={() => deleteUrl(url)}>❌</button>
+            <td>{url}</td>
+          </tr>
+        );
+      })}
+    </table>
+  );
 
   const space = (
     <div className="utilitySpace">
@@ -28,26 +48,19 @@ const WLinkSpace: React.FC = () => {
           onChange={(e) => handleChangeEvent(e, setVersion)}
           placeholder="URL from Jenkins"
         />
-        <h3>Page</h3>
-        <input
-          type="text"
-          value={page}
-          onChange={(e) => handleChangeEvent(e, setPage)}
-          placeholder="Example (/catalogue)"
-        />
-        <h3>Params</h3>
-        <input
-          type="text"
-          value={params}
-          onChange={(e) => handleChangeEvent(e, setParams)}
-          placeholder="Example (?categoryId=electronics&version=354534)"
-        />
       </div>
       <div className="buttonSpace">
-        <button onClick={() => navigator.clipboard.writeText(url)}>
-          create function
+        <button
+          onClick={() => {
+            let newUrls = [...urls, url];
+            setUrls(newUrls);
+            setVersion("");
+          }}
+        >
+          Save version
         </button>
       </div>
+      {table}
     </div>
   );
 
