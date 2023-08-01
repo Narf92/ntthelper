@@ -41,11 +41,17 @@ table {
   overflow: auto;
   border-radius: 20px;
   box-shadow: 10px 10px 5px grey;
+  transition: opacity 10s;
+  opacity: 1;
 
   & input {
     width: 70%;
     padding: 12px 20px;
     box-sizing: border-box;
     border-radius: 20px;
+  }
+
+  & h2 {
+    border-bottom: 1px solid black;
   }
 }

@@ -19,3 +19,7 @@
   background-color: aqua;
   grid-column: span 2;
 }
+
+#wLink {
+  background-color: #f1f5a8;
+}

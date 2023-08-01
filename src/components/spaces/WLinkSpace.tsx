@@ -38,7 +38,7 @@ const WLinkSpace: React.FC = () => {
   );
 
   const space = (
-    <div className="utilitySpace">
+    <div id="wLink" className="utilitySpace">
       <div className="form">
         <h2>WLink</h2>
         <h3>Jenkins version</h3>

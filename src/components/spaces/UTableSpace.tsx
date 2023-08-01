@@ -43,7 +43,7 @@ const UTableSpace: React.FC = () => {
     return (
       <tr key={`user-${user.name}`}>
         <td>{user.name}</td>
-        <td>
+        <td align="center">
           <button
             id={idBtnUserId}
             className={greenBtnId}
@@ -52,7 +52,7 @@ const UTableSpace: React.FC = () => {
             {user.id}
           </button>
         </td>
-        <td>
+        <td align="center">
           <button
             id={idBtnUserPass}
             className={greenBtnPass}
@@ -61,7 +61,7 @@ const UTableSpace: React.FC = () => {
             {user.pass}
           </button>
         </td>
-        <td>
+        <td align="center">
           <button
             id={idBtnUserPin2}
             className={greenBtnPin2}
@@ -70,7 +70,7 @@ const UTableSpace: React.FC = () => {
             {user.pin2}
           </button>
         </td>
-        <td>
+        <td align="center">
           <button
             id={idBtnUserUsuclo}
             className={greenBtnUsuclo}
